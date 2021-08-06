@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Landing Page</title>
+    <link rel="shortcut icon" type="image-x/png" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="css/hamburgers.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+    <section class="SignInPage d-md-flex">
+      <div class="form">
+        <div class="container">
+            
+                    <h4>Fiber</h4>
+                <h2>Create your Fiber account</h2>
+                <form>
+                    <label for="name">Your Name</label>
+                    <input type="text" placeholder="John Doe" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" placeholder="john@example.com" required>
+                    <div class="passord-wrapper d-flex flex-column justify-content-end">
+                      <label for="name">Password</label>
+                    <input name="login_text_password" type="text" id="password" placeholder="At Least 8 Characters"  required /><div class="eye"><img class="img-fluid" id="eye" src="images/eye.png"><img class="img-fluid" id="eyeClosed" src="images/hidden.png"></div>
+                    </div>
+                    
+                </form>
+                <input type="checkbox" name="privacy"><span>By creating an account on fiber, your agree to the <a class="terms" href="#">Terms & Conditions</a></span>
+                <input type="submit" value="Create Fiber Account">
+                <p>Already have an account? <a class="signin" href="#"">Sign In</a></p>
+        
+        </div><!--container-->
+      </div><!--form-->
+        <div class="img-sign">
+          <div class="container">
+                      <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="img-single">
+                  <img class="img-fluid" src="images/Sign Up Image.png">
+                  <h2>Unparalleled Templates</h2>
+                  <p>Crafted by team of professionals designers, our templates are eunparalleled in the market.</p>    
+                </div><!--img-single-->
+            </div>
+            <div class="swiper-slide">
+              <div class="img-single">
+                <img class="img-fluid" src="images/img1.jpg">
+                <h2>Customized templates</h2>
+                <p>Customize your personal portfolio even more with the ability to add your own custom CSS styles.</p>    
+              </div><!--img-single-->
+          </div>
+          <div class="swiper-slide">
+              <div class="img-single">
+                <img class="img-fluid" src="images/img2.jpg">
+                <h2>Build in minutes</h2>
+                <p>With a selection of premade templates, you can build out a portfolio in lass than 10 minutes.</p>    
+              </div><!--img-single-->
+          </div>
+          </div>
+            <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>  
+        </div>
+      </div>
+          </div><!--container-->
+           
+       
+    </section>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/slide.js"></script>
+<script>
+   const password = document.getElementById('password');
+   const eye = document.getElementById('eye');
+   const eyeClosed = document.getElementById('eyeClosed');
+
+   function changeToText(){
+     eye.addEventListener('click', ()=>{
+      if (password.Attribute=('type','text')) {
+                document.getElementsByName("login_text_password")[0].setAttribute('type','password');
+                eyeClosed.classList.toggle('eyeActive');
+            }
+            else{
+                document.getElementsByName("login_text_password")[0].setAttribute('type','password');          
+            }
+     });
+   }
+
+   function changeToPassword(){
+     eyeClosed.addEventListener('click', ()=>{
+      if (password.Attribute=('type','password')) {
+                document.getElementsByName("login_text_password")[0].setAttribute('type','text');
+                eyeClosed.classList.toggle('eyeActive');
+            }
+            else{
+                document.getElementsByName("login_text_password")[0].setAttribute('type','password');             
+            }
+     });
+   }
+   changeToText();
+   changeToPassword();
+
+</script>
+
+
+
+</body>
+</html>
