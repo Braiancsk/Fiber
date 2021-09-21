@@ -14,7 +14,7 @@ function showNav(){
 }
 
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
   // Default parameters
   slidesPerView: 3,
   loop: true,
